@@ -527,12 +527,6 @@ body.active .wrapper .section{
                  </a>
              </li>
              <li>
-                 <a href="{{ route('settings')}}">
-                     <span class="icon"><i class="fas fa-gear"></i></span>
-                     <span class="item">Settings</span>
-                 </a>
-             </li>
-             <li>
                  <a href="{{ route('logout')}}">
                      <span class="icon"><i class="fas fa-sign-out"></i></span>
                      <span class="item">Logout</span>

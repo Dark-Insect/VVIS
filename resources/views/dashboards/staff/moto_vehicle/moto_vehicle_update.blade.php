@@ -420,7 +420,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="ownerofthevehicle">Owner of the Vehicle </label>
-                                <input class="form-control" type="text" name="ownerofthevehicle" value="{{$moto_vehicle->ownerofthevehicle}}" required>
+                                <input class="form-control" type="string" name="ownerofthevehicle" value="{{$moto_vehicle->ownerofthevehicle}}" required>
                             </div>
 
                             <div class="form-group">
@@ -429,7 +429,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="completeaddress">Complete Address</label>
-                                <input class="form-control" type="text" name="completeaddress" value="{{$moto_vehicle->completeaddress}}" required>
+                                <input class="form-control" type="string" name="completeaddress" value="{{$moto_vehicle->completeaddress}}" required>
                             </div>
 
                             <div class="form-group">
@@ -439,42 +439,42 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="license_number">License Number</label>
-                                <input class="form-control" type="number" name="license_number" value="{{$moto_vehicle->license_number}}" required>
+                                <input class="form-control" type="string" name="license_number" value="{{$moto_vehicle->license_number}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="dlrno">DLR Number</label>
-                                <input class="form-control" type="number" name="dlrno" value="{{$moto_vehicle->dlrno}}" required>
+                                <input class="form-control" type="string" name="dlrno" value="{{$moto_vehicle->dlrno}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="mvplateno">MV Plate No.</label>
-                                <input class="form-control" type="number" name="mvplateno" value="{{$moto_vehicle->mvplateno}}" required>
+                                <input class="form-control" type="string" name="mvplateno" value="{{$moto_vehicle->mvplateno}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="makeofthevehicle">Make of Vehicle </label>
-                                <input class="form-control" type="text" name="makeofthevehicle" value="{{$moto_vehicle->makeofthevehicle}}" required>
+                                <input class="form-control" type="string" name="makeofthevehicle" value="{{$moto_vehicle->makeofthevehicle}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="typeofthebody">Type of the Body</label>
-                                <input class="form-control" type="text" name="typeofthebody" value="{{$moto_vehicle->typeofthebody}}" required>
+                                <input class="form-control" type="string" name="typeofthebody" value="{{$moto_vehicle->typeofthebody}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="yearmodel">Year Model</label>
-                                <input class="form-control" type="number" name="yearmodel" value="{{$moto_vehicle->yearmodel}}" required>
+                                <input class="form-control" type="string" name="yearmodel" value="{{$moto_vehicle->yearmodel}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="motono">Motor Number</label>
-                                <input class="form-control" type="number" name="motono" value="{{$moto_vehicle->motono}}" required>
+                                <input class="form-control" type="string" name="motono" value="{{$moto_vehicle->motono}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="chassisnumber">Chassis Number </label>
-                                <input class="form-control" type="number" name="chassisnumber" value="{{$moto_vehicle->chassisnumber}}" required>
+                                <input class="form-control" type="string" name="chassisnumber" value="{{$moto_vehicle->chassisnumber}}" required>
                             </div>
                             <h5><center>VIOLATIONS<center></h5>
                             <div class="form-group">
@@ -495,7 +495,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="place">Place of Apprehension</label>
-                                <input class="form-control" type="text" name="place" value="{{$moto_vehicle->place}}" required>
+                                <input class="form-control" type="string" name="place" value="{{$moto_vehicle->place}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="datetime">Date/Time</label>
@@ -503,11 +503,11 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="remarks">Remarks</label>
-                                <input class="form-control" type="text" name="remarks" value="{{$moto_vehicle->remarks}}" required>
+                                <input class="form-control" type="string" name="remarks" value="{{$moto_vehicle->remarks}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="condition">General Condition of the Motor Vehicle</label>
-                                <input class="form-control" type="text" name="condition" value="{{$moto_vehicle->condition}}" required>
+                                <input class="form-control" type="string" name="condition" value="{{$moto_vehicle->condition}}" required>
                             </div>
 
                             <div class="form-group">
@@ -542,36 +542,36 @@ body.active .wrapper .section{
                             <h5><center>CONFORME</center></h5>
                             <div class="form-group">
                                 <label for="conformeowner">Owner/Driver</label>
-                                <input class="form-control" type="text" name="conformeowner" value="{{$moto_vehicle->conformeowner}}" required>
+                                <input class="form-control" type="string" name="conformeowner" value="{{$moto_vehicle->conformeowner}}" required>
                             </div>
                             <h5><center>WITNESS</center></h5>
                             <div class="form-group">
                                 <label for="witness">Name of Witness</label>
-                                <input class="form-control" type="text" name="witness" value="{{$moto_vehicle->witness}}" required>
+                                <input class="form-control" type="string" name="witness" value="{{$moto_vehicle->witness}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="witnessaddress">Address</label>
-                                <input class="form-control" type="text" name="witnessaddress" value="{{$moto_vehicle->witnessaddress}}" required>
+                                <input class="form-control" type="string" name="witnessaddress" value="{{$moto_vehicle->witnessaddress}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="apprehending">Apprehending Officers</label>
-                                <input class="form-control" type="text" name="apprehending" value="{{$moto_vehicle->apprehending}}" required>
+                                <input class="form-control" type="string" name="apprehending" value="{{$moto_vehicle->apprehending}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="agency">Agency/Office</label>
-                                <input class="form-control" type="text" name="agency" value="{{$moto_vehicle->agency}}" required>
+                                <input class="form-control" type="string" name="agency" value="{{$moto_vehicle->agency}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="acknowledging">Acknowledging Officers</label>
-                                <input class="form-control" type="text" name="acknowledging" value="{{$moto_vehicle->acknowledging}}" required>
+                                <input class="form-control" type="string" name="acknowledging" value="{{$moto_vehicle->acknowledging}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="designation">Designation</label>
-                                <input class="form-control" type="text" name="designation" value="{{$moto_vehicle->designation}}" required>
+                                <input class="form-control" type="string" name="designation" value="{{$moto_vehicle->designation}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="chief">Chief,Traffic Management Office</label>
-                                <input class="form-control" type="text" name="chief" value="{{$moto_vehicle->chief}}" required>
+                                <input class="form-control" type="string" name="chief" value="{{$moto_vehicle->chief}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="chiefdatetime">DateTime</label>

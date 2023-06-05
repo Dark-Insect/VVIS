@@ -432,12 +432,12 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="name">Name </label>
-                                <input class="form-control" type="text" name="name"  required>
+                                <input class="form-control" type="string" name="name"  required>
                             </div>
 
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input class="form-control" type="text" name="address" required>
+                                <input class="form-control" type="string" name="address" required>
                             </div>
 
                             <div class="form-group">
@@ -453,7 +453,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="drivers_license_no">Driver's License No. </label>
-                                <input class="form-control" type="number" name="drivers_license_no" required>
+                                <input class="form-control" type="string" name="drivers_license_no" required>
                             </div>
 
                             <div class="form-group">
@@ -463,36 +463,36 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="registration_no">Registration No.</label>
-                                <input class="form-control" type="number" name="registration_no" required>
+                                <input class="form-control" type="string" name="registration_no" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="official_receipt">Official Receipt</label>
-                                <input class="form-control" type="text" name="official_receipt" required>
+                                <input class="form-control" type="string" name="official_receipt" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="type">Type</label>
-                                <input class="form-control" type="text" name="type" required>
+                                <input class="form-control" type="string" name="type" required>
                             </div>
                             <div class="form-group">
                                 <label for="make">Make</label>
-                                <input class="form-control" type="text" name="make" required>
+                                <input class="form-control" type="string" name="make" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="plate">Plate</label>
-                                <input class="form-control" type="text" name="plate" required>
+                                <input class="form-control" type="string" name="plate" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="owner">Owner</label>
-                                <input class="form-control" type="text" name="owner" required>
+                                <input class="form-control" type="string" name="owner" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="owneraddress">Owner Address</label>
-                                <input class="form-control" type="text" name="owneraddress" required>
+                                <input class="form-control" type="string" name="owneraddress" required>
                             </div>
 
                             <div class="form-group">
@@ -515,7 +515,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="place">Place</label>
-                                <input class="form-control" type="text" name="place" required>
+                                <input class="form-control" type="string" name="place" required>
                             </div>
                             <div class="form-group">
                                 <label for="time">Time</label>
@@ -523,7 +523,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="driver">Driver</label>
-                                <input class="form-control" type="text" name="driver" required>
+                                <input class="form-control" type="string"name="driver" required>
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
@@ -531,7 +531,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="trafficofficer">Traffic Officer</label>
-                                <input class="form-control" type="text" name="trafficofficer" required>
+                                <input class="form-control" type="string" name="trafficofficer" required>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success" type="submit">Save</button>

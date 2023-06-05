@@ -440,7 +440,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="ownerofthevehicle">Owner of the Vehicle </label>
-                                <input class="form-control" type="text" name="ownerofthevehicle" required>
+                                <input class="form-control" type="string" name="ownerofthevehicle" required>
                             </div>
 
                             <div class="form-group">
@@ -449,52 +449,52 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="completeaddress">Complete Address</label>
-                                <input class="form-control" type="text" name="completeaddress" required>
+                                <input class="form-control" type="string" name="completeaddress" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="completenameofthedriver">Complete Name of Driver </label>
-                                <input class="form-control" type="text" name="completenameofthedriver" required>
+                                <input class="form-control" type="string" name="completenameofthedriver" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="license_number">License Number</label>
-                                <input class="form-control" type="number" name="license_number" required>
+                                <input class="form-control" type="string" name="license_number" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="dlrno">DLR Number</label>
-                                <input class="form-control" type="number" name="dlrno" required>
+                                <input class="form-control" type="string" name="dlrno" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="mvplateno">MV Plate No.</label>
-                                <input class="form-control" type="number" name="mvplateno" required>
+                                <input class="form-control" type="string" name="mvplateno" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="makeofthevehicle">Make of Vehicle </label>
-                                <input class="form-control" type="text" name="makeofthevehicle" required>
+                                <input class="form-control" type="string" name="makeofthevehicle" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="typeofthebody">Type of the Body</label>
-                                <input class="form-control" type="text" name="typeofthebody" required>
+                                <input class="form-control" type="string" name="typeofthebody" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="yearmodel">Year Model</label>
-                                <input class="form-control" type="number" name="yearmodel" required>
+                                <input class="form-control" type="string" name="yearmodel" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="motono">Motor Number</label>
-                                <input class="form-control" type="number" name="motono" required>
+                                <input class="form-control" type="string" name="motono" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="chassisnumber">Chassis Number </label>
-                                <input class="form-control" type="number" name="chassisnumber" required>
+                                <input class="form-control" type="string" name="chassisnumber" required>
                             </div>
                             <h5><center>VIOLATIONS<center></h5>
                                 <div class="form-group">
@@ -516,7 +516,7 @@ body.active .wrapper .section{
                               <br>
                             <div class="form-group">
                                 <label for="place">Place of Apprehension</label>
-                                <input class="form-control" type="text" name="place" required>
+                                <input class="form-control" ttype="string" name="place" required>
                             </div>
                             <div class="form-group">
                                 <label for="datetime">Date/Time</label>
@@ -524,11 +524,11 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="remarks">Remarks</label>
-                                <input class="form-control" type="text" name="remarks" required>
+                                <input class="form-control" type="string" name="remarks" required>
                             </div>
                             <div class="form-group">
                                 <label for="condition">General Condition of the Motor Vehicle</label>
-                                <input class="form-control" type="text" name="condition" required>
+                                <input class="form-control" type="string" name="condition" required>
                             </div>
 
                             <div class="form-group">
@@ -563,36 +563,36 @@ body.active .wrapper .section{
                             <h5><center>CONFORME</center></h5>
                             <div class="form-group">
                                 <label for="conformeowner">Owner/Driver</label>
-                                <input class="form-control" type="text" name="conformeowner" required>
+                                <input class="form-control" type="string" name="conformeowner" required>
                             </div>
                             <h5><center>WITNESS</center></h5>
                             <div class="form-group">
                                 <label for="witness">Name of Witness</label>
-                                <input class="form-control" type="text" name="witness" required>
+                                <input class="form-control" type="string" name="witness" required>
                             </div>
                             <div class="form-group">
                                 <label for="witnessaddress">Address</label>
-                                <input class="form-control" type="text" name="witnessaddress" required>
+                                <input class="form-control" type="string"" name="witnessaddress" required>
                             </div>
                             <div class="form-group">
                                 <label for="apprehending">Apprehending Officers</label>
-                                <input class="form-control" type="text" name="apprehending" required>
+                                <input class="form-control" type="string" name="apprehending" required>
                             </div>
                             <div class="form-group">
                                 <label for="agency">Agency/Office</label>
-                                <input class="form-control" type="text" name="agency" required>
+                                <input class="form-control" type="string" name="agency" required>
                             </div>
                             <div class="form-group">
                                 <label for="acknowledging">Acknowledging Officers</label>
-                                <input class="form-control" type="text" name="acknowledging" required>
+                                <input class="form-control" type="string" name="acknowledging" required>
                             </div>
                             <div class="form-group">
                                 <label for="designation">Designation</label>
-                                <input class="form-control" type="text" name="designation" required>
+                                <input class="form-control" type="string" name="designation" required>
                             </div>
                             <div class="form-group">
                                 <label for="chief">Chief,Traffic Management Office</label>
-                                <input class="form-control" type="text" name="chief" required>
+                                <input class="form-control" type="string" name="chief" required>
                             </div>
                             <div class="form-group">
                                 <label for="chiefdatetime">DateTime</label>

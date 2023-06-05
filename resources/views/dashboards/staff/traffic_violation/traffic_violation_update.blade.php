@@ -423,7 +423,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input class="form-control" type="text" name="address" value="{{$traffic_violation->address}}" required>
+                                <input class="form-control" type="string" name="address" value="{{$traffic_violation->address}}" required>
                             </div>
 
                             <div class="form-group">
@@ -439,7 +439,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="drivers_license_no">Driver's License No. </label>
-                                <input class="form-control" type="number" name="drivers_license_no" value="{{$traffic_violation->drivers_license_no}}" required>
+                                <input class="form-control" type="string" name="drivers_license_no" value="{{$traffic_violation->drivers_license_no}}" required>
                             </div>
 
                             <div class="form-group">
@@ -449,36 +449,36 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="registration_no">Registration No.</label>
-                                <input class="form-control" type="number" name="registration_no" value="{{$traffic_violation->registration_no}}"required>
+                                <input class="form-control" type="string" type="string" value="{{$traffic_violation->registration_no}}"required>
                             </div>
 
                             <div class="form-group">
                                 <label for="official_receipt">Official Receipt</label>
-                                <input class="form-control" type="text" name="official_receipt"value="{{$traffic_violation->official_receipt}}" required>
+                                <input class="form-control" type="string" name="official_receipt"value="{{$traffic_violation->official_receipt}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="type">Type</label>
-                                <input class="form-control" type="text" name="type" value="{{$traffic_violation->type}}" required>
+                                <input class="form-control" type="string" name="type" value="{{$traffic_violation->type}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="make">Make</label>
-                                <input class="form-control" type="text" name="make" value="{{$traffic_violation->make}}" required>
+                                <input class="form-control" type="string" name="make" value="{{$traffic_violation->make}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="plate">Plate</label>
-                                <input class="form-control" type="text" name="plate" value="{{$traffic_violation->plate}}" required>
+                                <input class="form-control" type="string" name="plate" value="{{$traffic_violation->plate}}" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="owner">Owner</label>
-                                <input class="form-control" type="text" name="owner" value="{{$traffic_violation->owner}}"required>
+                                <input class="form-control" type="string" name="owner" value="{{$traffic_violation->owner}}"required>
                             </div>
 
                             <div class="form-group">
                                 <label for="owneraddress">Owner Address</label>
-                                <input class="form-control" type="text" name="owneraddress" value="{{$traffic_violation->owneraddress}}" required>
+                                <input class="form-control" type="string" name="owneraddress" value="{{$traffic_violation->owneraddress}}" required>
                             </div>
 
                             <div class="form-group">
@@ -502,7 +502,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="place">Place</label>
-                                <input class="form-control" type="text" name="place" value="{{$traffic_violation->place}}" required>
+                                <input class="form-control" type="string" name="place" value="{{$traffic_violation->place}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="time">Time</label>
@@ -510,7 +510,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="driver">Driver</label>
-                                <input class="form-control" type="text" name="driver" value="{{$traffic_violation->driver}}" required>
+                                <input class="form-control" type="string" name="driver" value="{{$traffic_violation->driver}}" required>
                             </div>
                             <div class="form-group">
                                 <label for="date">Date</label>
@@ -518,7 +518,7 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="trafficofficer">Traffic Officer</label>
-                                <input class="form-control" type="text" name="trafficofficer" value="{{$traffic_violation->trafficofficer}}"required>
+                                <input class="form-control" type="string" name="trafficofficer" value="{{$traffic_violation->trafficofficer}}"required>
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-success" type="submit">Save</button>

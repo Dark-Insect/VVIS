@@ -389,6 +389,14 @@ body.active .wrapper .section{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
 </head>
 <body>
 
@@ -489,20 +497,19 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="type">Following Violations </label>
-                                <select class="form-select @error('following_violations') is-invalid @enderror" type="string" name="following_violations" id="following_violations" required>
+                                <select class="form-select @error('following_violations') is-invalid @enderror" type="string" name="following_violations[]" id="following_violations" multiple="multiple" required>
                                     <option selected disabled></option>
-                                    <option >Disregarding Traffic Sign</option>
-                                    <option >Parking on a Sidewalk</option>
-                                    <option >Obstruction</option>
-                                    <option >Refusal to Convey</option>
-                                    <option >Parking in Front of Driveway not Accompanied by Professional Driver</option>
-                                    <option >Illegal Parking</option>
-                                    <option >Plate Improperly Displayed</option>
-                                    <option >Failure to Bring License</option>
-                                    <option >Discourtesy/Arrogance</option>
-                                    <option >No Registration/No Official Receipt</option>
-                                    <option >Driving in Slippers/Sleeveless Shirt</option>
-
+                                    <option value="Disregarding Traffic Sign">Disregarding Traffic Sign</option>
+                                    <option value="Parking on a Sidewalk">Parking on a Sidewalk</option>
+                                    <option value="Obstruction">Obstruction</option>
+                                    <option value="Refusal to Convey">Refusal to Convey</option>
+                                    <option value="Parking in Front of Driveway not Accompanied by Professional Driver">Parking in Front of Driveway not Accompanied by Professional Driver</option>
+                                    <option value="Illegal Parking">Illegal Parking</option>
+                                    <option value="Plate Improperly Displayed">Plate Improperly Displayed</option>
+                                    <option value="Failure to Bring License">Failure to Bring License</option>
+                                    <option value="Discourtesy/Arrogance">Discourtesy/Arrogance</option>
+                                    <option value="No Registration/No Official Receipt">No Registration/No Official Receipt</option>
+                                    <option value="Driving in Slippers/Sleeveless Shirt">Driving in Slippers/Sleeveless Shirt</option>
 
                                 </select>
                             </div>
@@ -574,8 +581,10 @@ body.active .wrapper .section{
 
  </div>
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
  <script>
     var hamburger = document.querySelector(".hamburger");
 	hamburger.addEventListener("click", function(){

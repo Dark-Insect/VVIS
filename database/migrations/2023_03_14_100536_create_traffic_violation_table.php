@@ -19,7 +19,7 @@ class CreateTrafficViolationTable extends Migration
             $table->string("name");
             $table->string("address");
             $table->string("licensetype");
-            $table->double("drivers_license_no");
+            $table->string("drivers_license_no");
             $table->datetime("datetime");
             $table->string("registration_no");
             $table->string("official_receipt");

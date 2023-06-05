@@ -497,23 +497,20 @@ body.active .wrapper .section{
                                 <input class="form-control" type="number" name="chassisnumber" required>
                             </div>
                             <h5><center>VIOLATIONS<center></h5>
-                            <div class="dropdown-container">
-                                <label for="violations">Violations </label>
-                                <div class="dropdown">
-                                    <select class="form-select @error('violations') is-invalid @enderror" type="string" name="violations" id="violations"required>
-                                    <option selected disabled></option>
-                                    <option value="Defective Muffler/No Muffler">Defective Muffler/No Muffler </option>
-                                    <option value="No Headlight">No Headlight</option>
-                                    <option value="No Tail Light">No Tail Light</option>
-                                    <option value="No Signal Light">No Signal Light</option>
-                                    <option value="No Plate Attached">No Plate Attached</option>
-                                    <option value="No Brake Light">No Brake Light</option>
-                                    <option value="Unlicense Driver/Expired DLI">Unlicense Driver/Expired DLI</option>
-                                    <option value="Unregistred MV">Unregistred MV</option>
-                                    <option value="Deliquent CR/OR">Deliquent CR/OR</option>
-                                  </select>
-                                </div>
-                                <button class="add-dropdown">+</button>
+                                <div class="form-group">
+                                    <label for="type">Violations </label>
+                                        <select class="form-select @error('violations') is-invalid @enderror" type="string" name="violations[]" id="violations" multiple="multiple" required>
+                                            <option selected disabled></option>
+                                            <option value="Defective Muffler/No Muffler">Defective Muffler/No Muffler </option>
+                                            <option value="No Headlight">No Headlight</option>
+                                            <option value="No Tail Light">No Tail Light</option>
+                                            <option value="No Signal Light">No Signal Light</option>
+                                            <option value="No Plate Attached">No Plate Attached</option>
+                                            <option value="No Brake Light">No Brake Light</option>
+                                            <option value="Unlicense Driver/Expired DLI">Unlicense Driver/Expired DLI</option>
+                                            <option value="Unregistred MV">Unregistred MV</option>
+                                            <option value="Deliquent CR/OR">Deliquent CR/OR</option>
+                                    </select>
                               </div>
 
                               <br>
@@ -536,7 +533,7 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="vehicle">Vehicle/Tool Lists </label>
-                                <select class="form-select" @error('vehicle') is-invalid @enderror" type="string" name="vehicle" id="vehicle" required>
+                                <select class="form-select" @error('vehicle') is-invalid @enderror type="string" name="vehicle[]" id="vehicle" multiple="multiple" required>
                                     <option selected disabled></option>
                                     <option >Air Conditioner</option>
                                     <option >Cigarette Lighter</option>

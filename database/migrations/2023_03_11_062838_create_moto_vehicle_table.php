@@ -20,20 +20,15 @@ class CreateMotoVehicleTable extends Migration
             $table->double("telephonenumber");
             $table->string("completeaddress");
             $table->string("completenameofthedriver");
-            $table->double("license_number");
-            $table->double("dlrno");
-            $table->double("mvplateno");
+            $table->string("license_number");
+            $table->string("dlrno");
+            $table->string("mvplateno");
             $table->string("makeofthevehicle");
             $table->string("typeofthebody");
-            $table->double("yearmodel");
-            $table->double("motono");
-            $table->double("chassisnumber");
-             $table->enum('violations',
-         ['Defective Muffler/No Muffler',
-         'No Headlight', 'No Tail Light',
-        'No Signal Light','No Plate Attached',
-    'No Brake Light','Unlicense Driver/Expired DLI',
-'Unregistred MV','Deliquent CR/OR']);
+            $table->string("yearmodel");
+            $table->string("motono");
+            $table->string("chassisnumber");
+            $table->string('violations');
             $table->string("place");
             $table->dateTime("datetime");
             $table->string("remarks");

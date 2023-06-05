@@ -43,7 +43,11 @@ class TrafficViolationController extends Controller
      */
     public function store(Request $request)
     {
+
         $input = $request->all();
+        $following_violations = $input['following_violations'];
+
+        $input['following_violations'] = implode(',',$following_violations);
         Traffic::create($input);
         return redirect()->route('traffic_violation')->with('flash_message', 'Records Addedd!');
 

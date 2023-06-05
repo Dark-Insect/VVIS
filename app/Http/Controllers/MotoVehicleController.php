@@ -52,6 +52,12 @@ class MotoVehicleController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+        $violations = $input['violations'];
+        $vehicle = $input['vehicle'];
+
+        $input['violations'] = implode(',',$violations);
+        $input['vehicle'] = implode(',',$vehicle);
+
         Moto::create($input);
         return redirect()->route('moto_vehicle')->with('flash_message', 'Records Addedd!');
 

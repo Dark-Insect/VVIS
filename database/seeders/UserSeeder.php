@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'username' => 'AdministratorGrimlocker',
             'email' => 'admin@gmail.com',
             'user_role' => 'Admin',
-            'password' => 'administratorFirstEntry2003'
+            'password' =>bcrypt('administratorFirstEntry2003')
         ]);
     }
 }

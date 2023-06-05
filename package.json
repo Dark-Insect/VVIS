@@ -2,6 +2,7 @@
     "private": true,
     "name": "my-package",
    "scripts": {
+        "start": "php artisan serve",
        "build": "babel src -d lib",
        "test": "jest",
        "dev": "npm run development",

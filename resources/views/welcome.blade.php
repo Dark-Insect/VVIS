@@ -313,7 +313,7 @@ header .container {
 }
 
 .person {
-  width: 82%;
+  width: 62%;
   transform: translate(15%, 25px);
 }
 
@@ -560,7 +560,7 @@ header .container {
               </div>
 
               <div class="right">
-                <img src="Dumaguete_seal.png" alt="Person Image" class="person"/>
+                <img src="TRAFFIC LOGO PART 2.png" alt="Person Image" class="person"/>
               </div>
             </div>
           </div>

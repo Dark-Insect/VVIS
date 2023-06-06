@@ -416,6 +416,8 @@ body.active .wrapper .section{
                         <form action="{{ route('traffic.update', $traffic_violation->id) }}" method="POST">
                             <input type="hidden" name="_method" value="PATCH">
 
+                            @csrf
+
                             <div class="form-group">
                                 <label for="name">Name </label>
                                 <input class="form-control" type="text" name="name" value="{{$traffic_violation->name}}" required>
@@ -483,21 +485,19 @@ body.active .wrapper .section{
 
                             <div class="form-group">
                                 <label for="type">Following Violations </label>
-                                <select class="form-select @error('following_violations') is-invalid @enderror" type="string" name="following_violations" value="{{$traffic_violation->following_violations}}" id="following_violations" required>
+                                <select class="form-select @error('following_violations') is-invalid @enderror" type="string" name="following_violations[]" value="{{$traffic_violation->following_violations}}" id="following_violations" multiple="multiple" required>
                                     <option selected disabled></option>
-                                    <option >Disregarding Traffic Sign</option>
-                                    <option >Parking on a Sidewalk</option>
-                                    <option >Obstruction</option>
-                                    <option >Refusal to Convey</option>
-                                    <option >Parking in Front of Driveway not Accompanied by Professional Driver</option>
-                                    <option >Illegal Parking</option>
-                                    <option >Plate Improperly Displayed</option>
-                                    <option >Failure to Bring License</option>
-                                    <option >Discourtesy/Arrogance</option>
-                                    <option >No Registration/No Official Receipt</option>
-                                    <option >Driving in Slippers/Sleeveless Shirt</option>
-
-
+                                    <option value="Disregarding Traffic Sign">Disregarding Traffic Sign</option>
+                                    <option value="Parking on a Sidewalk">Parking on a Sidewalk</option>
+                                    <option value="Obstruction">Obstruction</option>
+                                    <option value="Refusal to Convey">Refusal to Convey</option>
+                                    <option value="Parking in Front of Driveway not Accompanied by Professional Driver">Parking in Front of Driveway not Accompanied by Professional Driver</option>
+                                    <option value="Illegal Parking">Illegal Parking</option>
+                                    <option value="Plate Improperly Displayed">Plate Improperly Displayed</option>
+                                    <option value="Failure to Bring License">Failure to Bring License</option>
+                                    <option value="Discourtesy/Arrogance">Discourtesy/Arrogance</option>
+                                    <option value="No Registration/No Official Receipt">No Registration/No Official Receipt</option>
+                                    <option value="Driving in Slippers/Sleeveless Shirt">Driving in Slippers/Sleeveless Shirt</option>
                                 </select>
                             </div>
                             <div class="form-group">

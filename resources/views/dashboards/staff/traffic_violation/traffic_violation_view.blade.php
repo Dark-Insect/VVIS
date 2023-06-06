@@ -414,6 +414,7 @@ body.active .wrapper .section{
                     <a href="{{ route('pdf.trafficTicket', $traffic_violation->id) }}" class="btn btn-danger" title="Export">
                         Export Ticket into PDF
                     </a>
+
                     <!DOCTYPE html>
 <html>
 <head>
@@ -494,6 +495,7 @@ body.active .wrapper .section{
 }
   </style>
 </head>
+
 <body>
   <div class="ticket">
     <div class="ticket-header">

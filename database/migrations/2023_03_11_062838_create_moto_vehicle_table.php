@@ -38,10 +38,10 @@ class CreateMotoVehicleTable extends Migration
             $table->string("witness");
             $table->string("witnessaddress");
             $table->string("apprehending");
-            $table->string("agency");
+            $table->string('agency')->default('Traffic Management Office');
             $table->string("acknowledging");
             $table->string("designation");
-            $table->string("chief");
+            $table->string('chief')->default('Danny Atillo');
             $table->dateTime("chiefdatetime");
             $table->string('status')->default('Pending');
             $table->string('amount')->default('');

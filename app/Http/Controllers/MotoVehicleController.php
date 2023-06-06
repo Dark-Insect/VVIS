@@ -54,7 +54,11 @@ class MotoVehicleController extends Controller
         $input = $request->all();
         $violations = $input['violations'];
         $vehicle = $input['vehicle'];
+        $acknowledging = $input['acknowledging'];
+        $apprehending = $input['apprehending'];
 
+        $input['acknowledging'] = implode(',',$acknowledging);
+        $input['apprehending'] = implode(',',$apprehending);
         $input['violations'] = implode(',',$violations);
         $input['vehicle'] = implode(',',$vehicle);
 
@@ -104,6 +108,17 @@ class MotoVehicleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $input = $request->all();
+        $violations = $input['violations'];
+        $vehicle = $input['vehicle'];
+        $acknowledging = $input['acknowledging'];
+        $apprehending = $input['apprehending'];
+
+        $input['acknowledging'] = implode(',',$acknowledging);
+        $input['apprehending'] = implode(',',$apprehending);
+        $input['violations'] = implode(',',$violations);
+        $input['vehicle'] = implode(',',$vehicle);
+
         $moto_vehicle = Moto::find($id);
         $input = $request->all();
         $moto_vehicle->update($input);

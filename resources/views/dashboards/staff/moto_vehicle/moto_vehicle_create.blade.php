@@ -535,28 +535,28 @@ body.active .wrapper .section{
                                 <label for="vehicle">Vehicle/Tool Lists </label>
                                 <select class="form-select" @error('vehicle') is-invalid @enderror type="string" name="vehicle[]" id="vehicle" multiple="multiple" required>
                                     <option selected disabled></option>
-                                    <option >Air Conditioner</option>
-                                    <option >Cigarette Lighter</option>
-                                    <option >Ash Trays</option>
-                                    <option >Antenna</option>
-                                    <option >Radio</option>
-                                    <option >Stereo/Speaker</option>
-                                    <option >Auto Clock</option>
-                                    <option >Floor Mats Pcs.</option>
-                                    <option >Wiper Knobs</option>
-                                    <option >Cushion Pcs.</option>
-                                    <option >Seat Cover</option>
-                                    <option >Rear View Mirror</option>
-                                    <option >Side View Mirror</option>
-                                    <option >Windshield Glass</option>
-                                    <option >Hub/Caps Pcs.</option>
-                                    <option >Spare Tire</option>
-                                    <option >Horns</option>
-                                    <option >Headlights</option>
-                                    <option >EWD</option>
-                                    <option >Tire Wrench</option>
-                                    <option >Jack</option>
-                                    <option >Pliers Pcs.</option>
+                                    <option value="Air Conditioner">Air Conditioner</option>
+                                    <option value="Cigarette Lighter">Cigarette Lighter</option>
+                                    <option value="Ash Trays">Ash Trays</option>
+                                    <option value="Antenna">Antenna</option>
+                                    <option value="Radio">Radio</option>
+                                    <option value="Stereo/Speaker">Stereo/Speaker</option>
+                                    <option value="Auto Clock">Auto Clock</option>
+                                    <option value="Floor Mats Pcs.">Floor Mats Pcs.</option>
+                                    <option value="Wiper Knobs">Wiper Knobs</option>
+                                    <option value="Cushion Pcs.">Cushion Pcs.</option>
+                                    <option value="Seat Cover">Seat Cover</option>
+                                    <option value="Rear View Mirror">Rear View Mirror</option>
+                                    <option value="Side View Mirror">Side View Mirror</option>
+                                    <option value="Windshield Glass">Windshield Glass</option>
+                                    <option value="Hub/Caps Pcs.">Hub/Caps Pcs.</option>
+                                    <option value="Spare Tire">Spare Tire</option>
+                                    <option value="Horns">Horns</option>
+                                    <option value="Headlights">Headlights</option>
+                                    <option value="EWD">EWD</option>
+                                    <option value="Tire Wrench">Tire Wrench</option>
+                                    <option value="Jack">Jack</option>
+                                    <option value="Pliers Pcs.">Pliers Pcs.</option>
 
                                 </select>
                             </div>
@@ -575,24 +575,42 @@ body.active .wrapper .section{
                                 <input class="form-control" type="string"" name="witnessaddress" required>
                             </div>
                             <div class="form-group">
-                                <label for="apprehending">Apprehending Officers</label>
-                                <input class="form-control" type="string" name="apprehending" required>
-                            </div>
+                                <label for="type">Apprehending Officer(s) </label>
+                                    <select class="form-select @error('apprehending') is-invalid @enderror" type="string" name="apprehending[]" id="apprehending" multiple="multiple" required>
+                                        <option selected disabled></option>
+                                        <option value="Benigno Angay">Benigno Angay</option>
+                                        <option value="Dionisio R. Tejeros">Dionisio R. Tejeros</option>
+                                        <option value="Josaly C. Sembrino">Josaly C. Sembrino</option>
+                                        <option value="Rodrigo S. Loreto">Rodrigo S. Loreto</option>
+                                        <option value="Reginaldo C. Laredo">Reginaldo C. Laredo</option>
+                                        <option value="Junrey B. Gonzales">Junrey B. Gonzales</option>
+                                        <option value="Racky O. Paseja">Racky O. Paseja</option>
+
+                                </select>
+                          </div>
                             <div class="form-group">
                                 <label for="agency">Agency/Office</label>
-                                <input class="form-control" type="string" name="agency" required>
+                                <input class="form-control" type="string" name="agency" placeholder="Traffic Management Office" required>
                             </div>
                             <div class="form-group">
-                                <label for="acknowledging">Acknowledging Officers</label>
-                                <input class="form-control" type="string" name="acknowledging" required>
-                            </div>
+                                <label for="type">Acknowledging Officer(s) </label>
+                                    <select class="form-select @error('acknowledging') is-invalid @enderror" type="string" name="acknowledging[]" id="acknowledging" multiple="multiple" required>
+                                        <option selected disabled></option>
+                                        <option value="Gerardo K. Flores Jr.">Gerardo K. Flores Jr.</option>
+                                        <option value="Rey M. Gonzales">Rey M. Gonzales</option>
+                                        <option value="Josaly C. Sembrino">Josaly C. Sembrino</option>
+                                        <option value="Maurito J. Agan">Maurito J. Agan</option>
+
+
+                                </select>
+                          </div>
                             <div class="form-group">
                                 <label for="designation">Designation</label>
                                 <input class="form-control" type="string" name="designation" required>
                             </div>
                             <div class="form-group">
                                 <label for="chief">Chief,Traffic Management Office</label>
-                                <input class="form-control" type="string" name="chief" required>
+                                <input class="form-control" type="string" name="chief" placeholder="Danny Atillo" required>
                             </div>
                             <div class="form-group">
                                 <label for="chiefdatetime">DateTime</label>

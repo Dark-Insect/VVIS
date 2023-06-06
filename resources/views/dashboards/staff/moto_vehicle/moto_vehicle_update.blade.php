@@ -566,10 +566,12 @@ body.active .wrapper .section{
                                         <option value="Racky O. Paseja">Racky O. Paseja</option>
 
                                 </select>
-                            <div class="form-group">
-                                <label for="agency">Agency/Office</label>
-                                <input class="form-control" type="string" name="agency" value="{{$moto_vehicle->agency}}" required>
-                            </div>
+                                <div class="form-group">
+                                    <label for="agency">Agency/Office </label>
+                                    <select class="form-select @error('agency') is-invalid @enderror" type="string" name="agency" value="{{$moto_vehicle->agency}}" id="agency" required>
+                                        <option selected disabled></option>
+                                        <option >Traffic Management Office</option>
+                                    </select>
                             <div class="form-group">
                                 <label for="type">Acknowledging Officer(s) </label>
                                     <select class="form-select @error('acknowledging') is-invalid @enderror" type="string" name="acknowledging[]" value="{{$moto_vehicle->acknowledging}}" id="acknowledging" multiple="multiple" required>
@@ -588,8 +590,11 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="chief">Chief,Traffic Management Office</label>
-                                <input class="form-control" type="string" name="chief" value="{{$moto_vehicle->chief}}" required>
-                            </div>
+                                <select class="form-select @error('chief') is-invalid @enderror" type="string" name="chief" value="{{$moto_vehicle->chief}}" id="chief" required>
+                                    <option selected disabled></option>
+                                    <option >Danny Atillo</option>
+                                    <option >Gilbert E. Ablong, Sr.</option>
+                                </select>
                             <div class="form-group">
                                 <label for="chiefdatetime">DateTime</label>
                                 <input class="form-control" type="datetime-local" name="chiefdatetime" value="{{$moto_vehicle->chiefdatetime}}" required>

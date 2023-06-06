@@ -588,10 +588,13 @@ body.active .wrapper .section{
 
                                 </select>
                           </div>
-                            <div class="form-group">
-                                <label for="agency">Agency/Office</label>
-                                <input class="form-control" type="string" name="agency" placeholder="Traffic Management Office" required>
-                            </div>
+                          <div class="form-group">
+                            <label for="agency">Agency/Office </label>
+                            <select class="form-select @error('agency') is-invalid @enderror" type="string" name="agency" id="agency" required>
+                                <option selected disabled></option>
+                                <option >Traffic Management Office</option>
+                            </select>
+
                             <div class="form-group">
                                 <label for="type">Acknowledging Officer(s) </label>
                                     <select class="form-select @error('acknowledging') is-invalid @enderror" type="string" name="acknowledging[]" id="acknowledging" multiple="multiple" required>
@@ -610,8 +613,11 @@ body.active .wrapper .section{
                             </div>
                             <div class="form-group">
                                 <label for="chief">Chief,Traffic Management Office</label>
-                                <input class="form-control" type="string" name="chief" placeholder="Danny Atillo" required>
-                            </div>
+                                <select class="form-select @error('chief') is-invalid @enderror" type="string" name="chief" id="chief" required>
+                                    <option selected disabled></option>
+                                    <option >Danny Atillo</option>
+                                    <option >Gilbert E. Ablong, Sr.</option>
+                                </select>
                             <div class="form-group">
                                 <label for="chiefdatetime">DateTime</label>
                                 <input class="form-control" type="datetime-local" name="chiefdatetime" required>

@@ -496,6 +496,7 @@ body.active .wrapper .section{
                                     <td data-title="Driver">{{ $item->completenameofthedriver}}</td>
                                 <td data-title="Actions">
                                     <a href="{{ route('moto.view', $item->id) }}" title="View"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                    <a href="{{ route('payment_view_moto', $item->id) }}" title="Voucher"><button class="btn btn-dark btn-sm"><i class="fa fa-tag" aria-hidden="true"></i> Voucher</button></a>
                                     <a href="{{ route('moto.update', $item->id) }}" title="Edit"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                                     <form method="POST" action="{{ route('moto.destroy', $item->id) }}" accept-charset="UTF-8" style="display:inline">

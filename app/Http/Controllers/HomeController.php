@@ -80,6 +80,8 @@ class HomeController extends Controller
             $traffic_violation = Traffic::with("traffic_violation")->count();
             $conforme = Conforme::with("conforme")->count();
             $payment = Payment::with("payment")->count();
+
+            
             return view('dashboards.client.index',
              compact('owner_details','vehicle_information','drivers_information','moto_vehicle',
             'traffic_violation','conforme','users','payment'));

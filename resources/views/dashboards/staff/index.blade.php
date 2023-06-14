@@ -374,7 +374,9 @@ body.active .wrapper .section{
                 border-bottom: 1px solid #ccc;
             }
 }
-
+p{
+    color: black;
+}
 
 </style>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -441,7 +443,25 @@ body.active .wrapper .section{
                   </div>
                 </div>
               </div>
+<!--
 
+ <div class="box-container">
+    <div class="row">
+
+ <div class="container">
+
+    <div class="down-container">
+        <div class="row">
+            <section class="bg-light p-5">
+                <h3 class="pb-2"></h3>
+                <div class="card-body">
+
+
+<p>Total violations in the last day: {{ $violationsInDays }}</p>
+<p>Total violations in the last month: {{ $violationsInMonths }}</p>
+<p>Total violations in the last year: {{ $violationsInYears }}</p>
+
+-->
 </div>
      <div class="sidebar">
          <div class="profile">

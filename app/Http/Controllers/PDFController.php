@@ -90,5 +90,20 @@ class PDFController extends Controller
         ->setPaper('a4', 'portrait');
     return $pdf->download('Traffic Violation Citation Ticket.pdf');
       }
+
+      public function moto_voucher(Request $request, $id){
+        $moto_vehicle = Moto::find($id);
+        $pdf = PDF::loadView('dashboards.staff.payment.moto_voucher', array('moto_vehicle' => $moto_vehicle))
+            ->setPaper('a4', 'portrait');
+        return $pdf->download('Moto Vehicle Impounding Receipt (Voucher).pdf');
+      }
+
+      public function traffic_voucher(Request $request, $id){
+        $traffic_violation = Traffic::find($id);
+        $pdf = PDF::loadView('dashboards.staff.payment.traffic_voucher', array('traffic_violation' => $traffic_violation))
+        ->setPaper('a4', 'portrait');
+    return $pdf->download('Traffic Violation Citation Ticket (Voucher).pdf');
+      }
+
     }
 

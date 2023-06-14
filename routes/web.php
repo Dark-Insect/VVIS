@@ -134,9 +134,12 @@ Route::group(['prefix'=>'staff','middleware'=>['Staff','auth','BackPrevention']]
     Route::patch('/drivers_information/{id}',[DriversInformationController::class,'update']);
     Route::get('/drivers_information_view/{id}',[DriversInformationController::class,'show'])->name('drivers.view');
 
-
+    Route::post('/autofill', [MotoVehicleController::class, 'autofill'])->name('autofill');
     Route::get('/moto_vehicle_create', [MotoVehicleController::class, 'create'])->name('moto.create');
     Route::post('/moto_vehicle_create', [MotoVehicleController::class, 'store'])->name('moto.store');
+
+
+
     Route::delete('/moto_vehicle/{id}', [MotoVehicleController::class, 'destroy'])->name('moto.destroy');
     Route::get('/moto_vehicle_update/{id}',[MotoVehicleController::class, 'edit'])->name('moto.update');
     Route::patch('/moto_vehicle_update/{id}',[MotoVehicleController::class,'update']);
@@ -172,5 +175,8 @@ Route::group(['prefix'=>'staff','middleware'=>['Staff','auth','BackPrevention']]
     Route::get('/payment_view_traffic/{id}',[PaymentController::class,'payment_view_traffic'])->name('payment_view_traffic');
 
     Route::get('/moto_vehicle/data',[MotoVehicleController::class,'data'])->name('tables');
+
+    Route::get('/payment_view_moto/download-pdf/{id}',[PDFController::class,'moto_voucher'])->name('moto_voucher');
+    Route::get('/payment_view_traffic/download-pdf/{id}',[PDFController::class,'traffic_voucher'])->name('traffic_voucher');
 
 });

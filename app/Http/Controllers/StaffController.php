@@ -10,6 +10,7 @@ use App\Models\Moto;
 use App\Models\Traffic;
 use App\Models\Conforme;
 use App\Models\Payment;
+use Carbon\Carbon;
 class StaffController extends Controller
 {
  function index() {
@@ -27,9 +28,17 @@ class StaffController extends Controller
 
 $payment = $moto_vehicle + $traffic_violation;
 
+$violationsInDays = Moto::where('created_at', '>=', Carbon::now()->subDays(1))->count();
+
+// Total violations in months
+$violationsInMonths = Moto::where('created_at', '>=', Carbon::now()->subMonths(1))->count();
+
+// Total violations in years
+$violationsInYears = Moto::where('created_at', '>=', Carbon::now()->subYears(1))->count();
+
     return view('dashboards.staff.index',
      compact('owner_details','vehicle_information','drivers_information','moto_vehicle',
-    'traffic_violation','conforme','payment'));
+    'traffic_violation','conforme','payment','violationsInDays', 'violationsInMonths', 'violationsInYears'));
   }
  function profile() {
     return view('dashboards.staff.profile');

@@ -432,7 +432,21 @@ body.active .wrapper .section{
         font-size: 12px;
       }
     }
+    .side-img1{
+  float: left;
+}
+.side-img2{
+  float: right;
+}
 
+.up {
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    h4{
+        text-align: center;
+    }
 
 
 </style>
@@ -465,19 +479,26 @@ body.active .wrapper .section{
     <div class="row">
 
  <div class="container">
-
     <div class="down-container">
         <div class="row">
             <section class="bg-light p-5">
-                <h3 class="pb-2">CASHIER PAYMENT VERIFICATION RECORDS</h3>
+                <h3 class="pb-2">Traffic Management Office Official Voucher</h3>
+                <a href="{{ route('moto_voucher', $moto_vehicle->id)}}" class="btn btn-danger" title="Export">
+                    Export PDF
+                </a>
                 <div class="card-body">
                     <div class="ticket">
+                        <div class="ticket-header">
 
-
+                            <div class="up"><strong>Republic of the Philippines <br> City of Dumaguete</strong></div>
+                    <div class="side-img1"><img src="https://i.ibb.co/CJZLTr5/Dumaguete-Logo.png"
+                       alt="" width="68" height="68" style="margin-top: -40px;"></div>
+                       <div class="side-img2"><img src="https://i.ibb.co/TbbbJyF/TRAFFIC-LOGO-PART-2.png"
+                         alt="" width="75" height="75" style="margin-top: -40px;"></div>
+                        <br>
                         <div class="ticket-content">
-                          <label class="ticket-label">MVIR NO:</label>
-                          <span class="ticket-number">{{$moto_vehicle->mvirno}}</span>
-                        </div>
+                            <h4 class="ticket-label">MVIR NO: &nbsp;{{$moto_vehicle->mvirno}}</h4>
+                          </div>
                         <div class="ticket-content">
                           <label class="ticket-label"></label>
                           <h2 class="ticket-title">Motor Vehicle Impounding Receipt</h2>
@@ -498,7 +519,30 @@ body.active .wrapper .section{
                             <label class="ticket-label">Payment Rate</label>
                             <p class="ticket-description">&nbsp;&#8369;{{$moto_vehicle->amount}}</p>
                           </div>
+                          <br>
+                          <br>
 
+                          <div class="ticket">
+                            <div class="ticket-content">
+                                <label class="ticket-label">Apprehending Officer(s)</label>
+                                <p class="ticket-description">{{$moto_vehicle->apprehending}}</p>
+                              </div>
+
+                              <div class="ticket-content">
+                                <label class="ticket-label">Agency/Office</label>
+                                <p class="ticket-description">{{$moto_vehicle->agency}}</p>
+                              </div>
+
+                              <div class="ticket-content">
+                                <label class="ticket-label">Acknowledging Officer(s)</label>
+                                <p class="ticket-description">{{$moto_vehicle->acknowledging}}</p>
+                              </div>
+
+                              <div class="ticket-content">
+                                <label class="ticket-label">Chief/Traffic Management Office</label>
+                                <p class="ticket-description">{{$moto_vehicle->chief}}</p>
+                              </div>
+                          </div>
                       </div>
 
 
@@ -521,7 +565,7 @@ body.active .wrapper .section{
                  </a>
              </li>
              <li>
-                 <a href="{{ route('moto_vehicle')}}">
+                 <a href="{{ route('moto_vehicle')}}" class="active">
                      <span class="icon"><i class="fas fa-motorcycle"></i></span>
                      <span class="item">Motor Vehicle</span>
                  </a>
@@ -533,7 +577,7 @@ body.active .wrapper .section{
                  </a>
              </li>
              <li>
-                 <a href="{{ route('payment.index')}}" class="active">
+                 <a href="{{ route('payment.index')}}">
                      <span class="icon"><i class="fas fa-money"></i></span>
                      <span class="item">Payment</span>
                  </a>

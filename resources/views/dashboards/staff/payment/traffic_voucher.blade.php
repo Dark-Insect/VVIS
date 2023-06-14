@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-
 <!DOCTYPE html>
 <html>
 <title>VVIS</title>
@@ -224,7 +220,7 @@ h2{
   margin-bottom: 2px;
   position: relative;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 
 *{
 	list-style: none;
@@ -433,36 +429,27 @@ body.active .wrapper .section{
       }
     }
 
+    .side-img1{
+  float: left;
+}
+.side-img2{
+  float: right;
+}
+
+.up {
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+    h4{
+        text-align: center;
+    }
 
 
 
 </style>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/mainpower.css">
-<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-<body>
 
-  <div class="wrapper">
-    <div class="section">
- <div class="top_navbar">
-   <div class="hamburger">
-     <a href="#">
-       <i class="fas fa-bars"></i>
-     </a>
-   </div>
- </div>
-
- <div class="box-container">
+<div class="box-container">
     <div class="row">
 
  <div class="container">
@@ -470,133 +457,57 @@ body.active .wrapper .section{
     <div class="down-container">
         <div class="row">
             <section class="bg-light p-5">
-                <h3 class="pb-2">CASHIER PAYMENT VERIFICATION RECORDS</h3>
+                <h3 class="pb-2">Traffic Management Office Official Voucher</h3>
                 <div class="card-body">
                     <div class="ticket">
-                        <h3>Motor Vehicle Impounding Receipt</h3>
-                        <div class="table-responsive" id="no-more-tables">
-                            <table class="table bg-white" id="example">
-                                <thead class="bg-dark text-light">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Owner</th>
-                                    <th>Address</th>
-                                    <th>Driver</th>
-                                    <th>Payment Status</th>
-                                  
-                                </tr>
-                            </thead>
-                              <tbody>
-                                @foreach($moto_vehicle as $item)
-                                <tr>
-                                    <td data-title="ID">{{ $loop->iteration }}</td>
-                                        <td data-title="Owner">{{ $item->ownerofthevehicle }}</td>
-                                        <td data-title="Address">{{ $item->completeaddress }}</td>
-                                        <td data-title="Driver">{{ $item->completenameofthedriver}}</td>
-                                        <td data-title="Status">{{ $item->status}}</td>
-                                     {{-- <td data-title="Actions">
-                                        <a href="{{ route('payment_view_moto', $item->id) }}" title="View"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                    </td> --}}
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="ticket-header">
 
-     </div>
+                            <div class="up"><strong>Republic of the Philippines <br> City of Dumaguete</strong></div>
+                    <div class="side-img1"><img src="https://i.ibb.co/CJZLTr5/Dumaguete-Logo.png"
+                       alt="" width="68" height="68" style="margin-top: -40px;"></div>
+                       <div class="side-img2"><img src="https://i.ibb.co/TbbbJyF/TRAFFIC-LOGO-PART-2.png"
+                         alt="" width="75" height="75" style="margin-top: -40px;"></div>
+                        <br>
+                            <div class="ticket-content">
+                              <h4 class="ticket-label">MVIR NO: &nbsp;{{$traffic_violation->mvirno}}</h4>
+                            </div>
+                            <div class="ticket-content">
+                                <label class="ticket-label"></label>
+                                <h2 class="ticket-title">Traffic Violation Citation Ticket</h2>
+                              </div>
+                            <div class="ticket-content">
+                                <label class="ticket-label">Name</label>
+                                <p class="ticket-description">{{$traffic_violation->name }}</p>
+                              </div>
+                              <div class="ticket-content">
+                                  <label class="ticket-label">Address</label>
+                                  <p class="ticket-description">{{$traffic_violation->address}}</p>
+                                </div>
+                                <div class="ticket-content">
+                                    <label class="ticket-label">Status</label>
+                                    <p class="ticket-description">{{$traffic_violation->status}}</p>
+                                  </div>
+                                  <div class="ticket-content">
+                                    <label class="ticket-label">Payment Rate</label>
+                                    <p class="ticket-description">&nbsp;&#8369;{{$traffic_violation->amount}}</p>
+                                  </div>
 
-     <div class="ticket">
-        <h3>Traffic Violation Citation Ticket</h3>
-        <div class="table-responsive" id="no-more-tables">
-            <table class="table bg-white" id="traffic">
-                <thead class="bg-dark text-light">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Type</th>
-                    <th>Payment Status</th>
+                                  <br>
+                                  <br>
 
-                </tr>
-            </thead>
-              <tbody>
-                @foreach($traffic_violation as $item)
-                <tr>
-                    <td data-title="ID">{{ $loop->iteration }}</td>
-                    <td data-title="Name">{{ $item->name }}</td>
-                    <td data-title="Address">{{ $item->address }}</td>
-                    <td data-title="Type">{{ $item->type}}</td>
-                    <td data-title="Status">{{ $item->status}}</td>
-               {{--     <td data-title="Actions">
-                        <a href="{{ route('payment_view_traffic', $item->id) }}" title="View"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                    </td> --}}
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-     </div>
+                                  <div class="ticket">
+                                    <div class="ticket-content">
+                                        <label class="ticket-label">Date</label>
+                                        <p class="ticket-description">{{$traffic_violation->date}}</p>
+                                      </div>
 
-     <div class="sidebar">
-         <div class="profile">
-             <img src="https://cdn3.iconfinder.com/data/icons/team-management/136/28-512.png" alt="profile_picture">
-             <h3>STAFF DASHBOARD</h3>
-             <p>{{ Auth::user()->name }}</p>
-         </div>
-         <ul>
-             <li>
-                 <a href="{{ route('staff.dashboard')}}">
-                     <span class="icon"><i class="fas fa-home"></i></span>
-                     <span class="item">Dashboard</span>
-                 </a>
-             </li>
-             <li>
-                 <a href="{{ route('moto_vehicle')}}">
-                     <span class="icon"><i class="fas fa-motorcycle"></i></span>
-                     <span class="item">Motor Vehicle</span>
-                 </a>
-             </li>
-             <li>
-                 <a href="{{ route('traffic_violation')}}">
-                     <span class="icon"><i class="fas fa-ticket"></i></span>
-                     <span class="item">Violation</span>
-                 </a>
-             </li>
-             <li>
-                 <a href="{{ route('payment.index')}}" class="active">
-                     <span class="icon"><i class="fas fa-money"></i></span>
-                     <span class="item">Payment</span>
-                 </a>
-             </li>
-             <li>
-                 <a href="{{ route('logout')}}">
-                     <span class="icon"><i class="fas fa-sign-out"></i></span>
-                     <span class="item">Logout</span>
-                 </a>
-             </li>
-         </ul>
-     </div>
+                                      <div class="ticket-content">
+                                        <label class="ticket-label">Traffic Officer</label>
+                                        <p class="ticket-description">{{$traffic_violation->trafficofficer}}</p>
+                                      </div>
+                                  </div>
 
- </div>
+                      </div>
 
- <script>
-    $(document).ready(function () {
-    $('#example').DataTable();
-});
-</script>
 
-<script>
-    $(document).ready(function () {
-    $('#traffic').DataTable();
-});
-</script>
 
- <script>
-    var hamburger = document.querySelector(".hamburger");
-	hamburger.addEventListener("click", function(){
-		document.querySelector("body").classList.toggle("active");
-	})
- </script>
-
-</body>
-</html>
-
-@endsection

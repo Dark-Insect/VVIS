@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 class ClientController extends Controller
 {
     public function index(){
+
+
+    $moto_vehicle = Moto::with("moto_vehicle")->count();
+    $traffic_violation = Traffic::with("traffic_violation")->count();
+
+    $payment = $moto_vehicle + $traffic_violation;
         $moto_vehicle = Moto::all();
         $traffic_violation = Traffic::all();
         $users = User::all();

@@ -486,7 +486,11 @@ body.active .wrapper .section{
                                     <td data-title="Driver">{{ $item->completenameofthedriver}}</td>
                                     <td data-title="Status">{{ $item->status}}</td>
                                     <td data-title="Actions">
+                                        @if($item->status != 'Paid')
+
                                         <a href="{{ route('moto_verify', $item->id) }}" title="Verify"><button class="btn btn-info"><i class="fa fa-check" aria-hidden="true"></i>Verify Payment</button></a>
+                                        @endif
+
                                    </td>
                             </tr>
                             @endforeach

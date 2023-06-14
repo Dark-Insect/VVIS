@@ -433,68 +433,68 @@ body.active .wrapper .section{
                         <form action="{{ route('moto.store')}}" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
+                            @csrf
                             <div class="form-group">
                                 <label for="mvirno">MVIR NO.</label>
-                                <input class="form-control" type="number" name="mvirno" required>
+                                <input class="form-control" type="number"  name="mvirno" id="mvirno" value="" required>
                             </div>
                             <div class="form-group">
                                 <label for="ownerofthevehicle">Owner of the Vehicle </label>
-                                <input class="form-control" type="string" name="ownerofthevehicle" required>
+                                <input class="form-control" type="string" name="ownerofthevehicle" id="ownerofthevehicle" value="{{ old('ownerofthevehicle')}}"  required>
                             </div>
 
                             <div class="form-group">
                                 <label for="telephonenumber">Telephone Number </label>
-                                <input class="form-control" type="number" name="telephonenumber" required>
+                                <input class="form-control" type="number" name="telephonenumber" id="telephonenumber"  value="{{ old('telephonenumber') }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="completeaddress">Complete Address</label>
-                                <input class="form-control" type="string" name="completeaddress" required>
+                                <input class="form-control" type="string" name="completeaddress" id="completeaddress" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="completenameofthedriver">Complete Name of Driver </label>
-                                <input class="form-control" type="string" name="completenameofthedriver" required>
+                                <input class="form-control" type="string" name="completenameofthedriver" id="completenameofthedriver" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="license_number">License Number</label>
-                                <input class="form-control" type="string" name="license_number" required>
+                                <input class="form-control" type="string" name="license_number" id="license_number" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="dlrno">DLR Number</label>
-                                <input class="form-control" type="string" name="dlrno" required>
+                                <input class="form-control" type="string" name="dlrno" id="dlrno" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="mvplateno">MV Plate No.</label>
-                                <input class="form-control" type="string" name="mvplateno" required>
+                                <input class="form-control" type="string" name="mvplateno" id="mvplateno" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="makeofthevehicle">Make of Vehicle </label>
-                                <input class="form-control" type="string" name="makeofthevehicle" required>
+                                <input class="form-control" type="string" name="makeofthevehicle" id="makeofthevehicle" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="typeofthebody">Type of the Body</label>
-                                <input class="form-control" type="string" name="typeofthebody" required>
+                                <input class="form-control" type="string" name="typeofthebody" id="typeofthebody" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="yearmodel">Year Model</label>
-                                <input class="form-control" type="string" name="yearmodel" required>
+                                <input class="form-control" type="string" name="yearmodel" id="yearmodel" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="motono">Motor Number</label>
-                                <input class="form-control" type="string" name="motono" required>
+                                <input class="form-control" type="string" name="motono" id="motono" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="chassisnumber">Chassis Number </label>
-                                <input class="form-control" type="string" name="chassisnumber" required>
+                                <input class="form-control" type="string" name="chassisnumber" id="chassisnumber" required>
                             </div>
                             <h5><center>VIOLATIONS<center></h5>
                                 <div class="form-group">
@@ -669,6 +669,44 @@ body.active .wrapper .section{
      </div>
 
  </div>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+    $(document).ready(function() {
+         $('#mvirno').on('input', function() {
+             var mvirno = $(this).val();
+
+             $.ajax({
+                 url: 'autofill',
+                 type: 'POST',
+                 data: {
+                     _token: '{{ csrf_token() }}',
+                     mvirno: mvirno
+                 },
+                 success: function(response) {
+                     if (response.success) {
+                        $('#ownerofthevehicle').val(response.data.owner);
+                        $('#telephonenumber').val(response.data.telephonenumber);
+                        $('#completeaddress').val(response.data.completeaddress);
+                        $('#completenameofthedriver').val(response.data.completenameofthedriver);
+                        $('#license_number').val(response.data.license_number);
+                        $('#dlrno').val(response.data.dlrno);
+                        $('#mvplateno').val(response.data.mvplateno);
+                        $('#makeofthevehicle').val(response.data.makeofthevehicle);
+                        $('#typeofthebody').val(response.data.typeofthebody);
+                        $('#yearmodel').val(response.data.yearmodel);
+                        $('#motono').val(response.data.motono);
+                        $('#chassisnumber').val(response.data.chassisnumber);
+                        //$('#').val(response.data.);
+                        // set values for other fields here
+
+
+                     }
+                 }
+             });
+         });
+     });
+
+ </script>
 
  <script>
 
@@ -720,6 +758,9 @@ console.log(selectedValues); // Array of selected values
 		document.querySelector("body").classList.toggle("active");
 	})
  </script>
+
+
+
 
 </body>
 </html>

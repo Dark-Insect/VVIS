@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\Moto;
 use DataTables;
+use Illuminate\Validation\Rule;
+
+
 class MotoVehicleController extends Controller
 {
     /**
@@ -21,6 +24,7 @@ class MotoVehicleController extends Controller
 
     public function index(Request $request)
     {
+
         $search = $request['search'] ?? "";
 
         if($search!=""){
@@ -29,7 +33,8 @@ class MotoVehicleController extends Controller
         }else{
             $moto_vehicle = Moto::all();
         }
-        $moto_vehicle = compact('moto_vehicle','search');
+        $moto_vehicle = compact('moto_vehicle','search',);
+
         return view('dashboards.staff.moto_vehicle.moto_vehicle')->with($moto_vehicle);
     }
 
@@ -42,6 +47,41 @@ class MotoVehicleController extends Controller
     {
         return view('dashboards.staff.moto_vehicle.moto_vehicle_create');
     }
+    public function autofill(Request $request)
+    {
+        $mvirno = $request->input('mvirno');
+
+        $moto = Moto::where('mvirno', $mvirno)->first();
+
+
+        if ($moto) {
+            $response = [
+                'success' => true,
+                'data' => [
+                    'owner' => $moto->ownerofthevehicle,
+                    'telephonenumber' => $moto->telephonenumber,
+                    'completeaddress' => $moto->completeaddress,
+                    'completenameofthedriver' => $moto->completenameofthedriver,
+                    'license_number' => $moto->license_number,
+                    'dlrno' => $moto->dlrno,
+                    'mvplateno' => $moto->mvplateno,
+                    'makeofthevehicle' => $moto->makeofthevehicle,
+                    'typeofthebody' => $moto->typeofthebody,
+                    'yearmodel' => $moto->yearmodel,
+                    'motono' => $moto->motono,
+                    'chassisnumber' => $moto->chassisnumber,
+
+                    // Add other fields to populate as needed
+                ]
+            ];
+        } else {
+            $response = [
+                'success' => false,
+                'data' => null
+            ];
+        }
+        return response()->json($response);
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -51,6 +91,16 @@ class MotoVehicleController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'mvirno' => [
+                'required',
+                'numeric',
+                Rule::unique(Moto::class, 'mvirno'),
+            ],
+            // Add validation rules for other fields here
+        ]);
+
+
         $input = $request->all();
         $violations = $input['violations'];
         $vehicle = $input['vehicle'];
@@ -119,6 +169,38 @@ class MotoVehicleController extends Controller
         $input['violations'] = implode(',',$violations);
         $input['vehicle'] = implode(',',$vehicle);
 
+        $validateData = $request->validate([
+            'ownerofthevehicle'=> 'required',
+        'telephonenumber'=> 'required',
+         'completeaddress'=> 'required',
+         'completenameofthedriver'=> 'required',
+         'license_number'=> 'required',
+         'dlrno'=> 'required',
+         'mvplateno'=> 'required',
+         'makeofthevehicle'=> 'required',
+         'typeofthebody'=> 'required',
+         'yearmodel'=> 'required',
+         'motono'=> 'required',
+         'chassisnumber'=> 'required',
+         'violations'=> 'required',
+         'place'=> 'required',
+         'datetime'=> 'required',
+         'remarks'=> 'required',
+         'condition'=> 'required',
+         'vehicle'=> 'required',
+         'conformeowner'=> 'required',
+        'witness'=> 'required',
+        'witnessaddress'=> 'required',
+        'apprehending'=> 'required',
+        'agency'=> 'required',
+        'acknowledging'=> 'required',
+        'designation'=> 'required',
+        'chief'=> 'required',
+        'chiefdatetime'=> 'required',
+        'status'=> 'required',
+        'amount'=> 'required',
+        'mvirno'=> 'required',
+        ]);
         $moto_vehicle = Moto::find($id);
         $input = $request->all();
         $moto_vehicle->update($input);

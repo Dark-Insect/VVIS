@@ -168,39 +168,7 @@ class MotoVehicleController extends Controller
         $input['apprehending'] = implode(',',$apprehending);
         $input['violations'] = implode(',',$violations);
         $input['vehicle'] = implode(',',$vehicle);
-
-        $validateData = $request->validate([
-            'ownerofthevehicle'=> 'required',
-        'telephonenumber'=> 'required',
-         'completeaddress'=> 'required',
-         'completenameofthedriver'=> 'required',
-         'license_number'=> 'required',
-         'dlrno'=> 'required',
-         'mvplateno'=> 'required',
-         'makeofthevehicle'=> 'required',
-         'typeofthebody'=> 'required',
-         'yearmodel'=> 'required',
-         'motono'=> 'required',
-         'chassisnumber'=> 'required',
-         'violations'=> 'required',
-         'place'=> 'required',
-         'datetime'=> 'required',
-         'remarks'=> 'required',
-         'condition'=> 'required',
-         'vehicle'=> 'required',
-         'conformeowner'=> 'required',
-        'witness'=> 'required',
-        'witnessaddress'=> 'required',
-        'apprehending'=> 'required',
-        'agency'=> 'required',
-        'acknowledging'=> 'required',
-        'designation'=> 'required',
-        'chief'=> 'required',
-        'chiefdatetime'=> 'required',
-        'status'=> 'required',
-        'amount'=> 'required',
-        'mvirno'=> 'required',
-        ]);
+        
         $moto_vehicle = Moto::find($id);
         $input = $request->all();
         $moto_vehicle->update($input);
